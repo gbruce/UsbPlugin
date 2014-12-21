@@ -1,0 +1,275 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3C4E0411A476B730018686D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C4E0401A476B730018686D /* CoreFoundation.framework */; };
+		B3C4E0481A476B730018686D /* UsbPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C4E0471A476B730018686D /* UsbPlugin.h */; };
+		B3C4E04A1A476B730018686D /* UsbPluginPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C4E0491A476B730018686D /* UsbPluginPriv.h */; };
+		B3C4E04C1A476B730018686D /* UsbPlugin.cp in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E04B1A476B730018686D /* UsbPlugin.cp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B3C4E03D1A476B730018686D /* UsbPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsbPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C4E0401A476B730018686D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B3C4E0441A476B730018686D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C4E0451A476B730018686D /* UsbPluginProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UsbPluginProj.xcconfig; sourceTree = "<group>"; };
+		B3C4E0461A476B730018686D /* UsbPluginTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UsbPluginTarget.xcconfig; sourceTree = "<group>"; };
+		B3C4E0471A476B730018686D /* UsbPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsbPlugin.h; sourceTree = "<group>"; };
+		B3C4E0491A476B730018686D /* UsbPluginPriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsbPluginPriv.h; sourceTree = "<group>"; };
+		B3C4E04B1A476B730018686D /* UsbPlugin.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UsbPlugin.cp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3C4E03A1A476B730018686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C4E0411A476B730018686D /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3C4E0341A476B730018686D = {
+			isa = PBXGroup;
+			children = (
+				B3C4E0421A476B730018686D /* UsbPlugin */,
+				B3C4E03F1A476B730018686D /* Frameworks */,
+				B3C4E03E1A476B730018686D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3C4E03E1A476B730018686D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4E03D1A476B730018686D /* UsbPlugin.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3C4E03F1A476B730018686D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4E0401A476B730018686D /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3C4E0421A476B730018686D /* UsbPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4E0451A476B730018686D /* UsbPluginProj.xcconfig */,
+				B3C4E0461A476B730018686D /* UsbPluginTarget.xcconfig */,
+				B3C4E0471A476B730018686D /* UsbPlugin.h */,
+				B3C4E0491A476B730018686D /* UsbPluginPriv.h */,
+				B3C4E04B1A476B730018686D /* UsbPlugin.cp */,
+				B3C4E0431A476B730018686D /* Supporting Files */,
+			);
+			path = UsbPlugin;
+			sourceTree = "<group>";
+		};
+		B3C4E0431A476B730018686D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4E0441A476B730018686D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B3C4E03B1A476B730018686D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C4E0481A476B730018686D /* UsbPlugin.h in Headers */,
+				B3C4E04A1A476B730018686D /* UsbPluginPriv.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B3C4E03C1A476B730018686D /* UsbPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3C4E04F1A476B730018686D /* Build configuration list for PBXNativeTarget "UsbPlugin" */;
+			buildPhases = (
+				B3C4E0391A476B730018686D /* Sources */,
+				B3C4E03A1A476B730018686D /* Frameworks */,
+				B3C4E03B1A476B730018686D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsbPlugin;
+			productName = UsbPlugin;
+			productReference = B3C4E03D1A476B730018686D /* UsbPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3C4E0351A476B730018686D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Guillermo Bruce";
+				TargetAttributes = {
+					B3C4E03C1A476B730018686D = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = B3C4E0381A476B730018686D /* Build configuration list for PBXProject "UsbPlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B3C4E0341A476B730018686D;
+			productRefGroup = B3C4E03E1A476B730018686D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3C4E03C1A476B730018686D /* UsbPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3C4E0391A476B730018686D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C4E04C1A476B730018686D /* UsbPlugin.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B3C4E04D1A476B730018686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B3C4E04E1A476B730018686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B3C4E0501A476B730018686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UsbPlugin/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B3C4E0511A476B730018686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UsbPlugin/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3C4E0381A476B730018686D /* Build configuration list for PBXProject "UsbPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C4E04D1A476B730018686D /* Debug */,
+				B3C4E04E1A476B730018686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3C4E04F1A476B730018686D /* Build configuration list for PBXNativeTarget "UsbPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C4E0501A476B730018686D /* Debug */,
+				B3C4E0511A476B730018686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3C4E0351A476B730018686D /* Project object */;
+}
