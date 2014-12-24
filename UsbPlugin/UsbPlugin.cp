@@ -1,22 +1,17 @@
-/*
- *  UsbPlugin.cp
- *  UsbPlugin
- *
- *  Created by Guillermo Bruce on 12/21/14.
- *  Copyright (c) 2014 Guillermo Bruce. All rights reserved.
- *
- */
 
 #include "UsbPlugin.h"
-#include "UsbPluginPriv.h"
+#include "libusb-1.0/libusb.h"
 
-CFStringRef UsbPluginUUID(void)
-{
-	CUsbPlugin* theObj = new CUsbPlugin;
-	return theObj->UUID();
+libusb_context * GlobalContext = 0;
+
+void UsbInit() {
+    int result = libusb_init(&GlobalContext);
+    
+    libusb_device_handle* handle = libusb_open_device_with_vid_pid(GlobalContext, 0x1915, 0x7777);
+    
+    libusb_claim_interface(handle,
 }
 
-CFStringRef CUsbPlugin::UUID()
-{
-	return CFSTR("0001020304050607");
-}
+int GetNumDevices() {
+    return 0;
+};

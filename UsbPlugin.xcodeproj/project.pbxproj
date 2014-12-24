@@ -7,21 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3C4E0411A476B730018686D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C4E0401A476B730018686D /* CoreFoundation.framework */; };
 		B3C4E0481A476B730018686D /* UsbPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C4E0471A476B730018686D /* UsbPlugin.h */; };
-		B3C4E04A1A476B730018686D /* UsbPluginPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C4E0491A476B730018686D /* UsbPluginPriv.h */; };
 		B3C4E04C1A476B730018686D /* UsbPlugin.cp in Sources */ = {isa = PBXBuildFile; fileRef = B3C4E04B1A476B730018686D /* UsbPlugin.cp */; };
+		B3C4E0531A4815CA0018686D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C4E0521A4815CA0018686D /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3C4E03D1A476B730018686D /* UsbPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsbPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C4E0401A476B730018686D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		B3C4E0441A476B730018686D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3C4E0451A476B730018686D /* UsbPluginProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UsbPluginProj.xcconfig; sourceTree = "<group>"; };
-		B3C4E0461A476B730018686D /* UsbPluginTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UsbPluginTarget.xcconfig; sourceTree = "<group>"; };
 		B3C4E0471A476B730018686D /* UsbPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsbPlugin.h; sourceTree = "<group>"; };
-		B3C4E0491A476B730018686D /* UsbPluginPriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsbPluginPriv.h; sourceTree = "<group>"; };
 		B3C4E04B1A476B730018686D /* UsbPlugin.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UsbPlugin.cp; sourceTree = "<group>"; };
+		B3C4E0521A4815CA0018686D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C4E0411A476B730018686D /* CoreFoundation.framework in Frameworks */,
+				B3C4E0531A4815CA0018686D /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +52,7 @@
 		B3C4E03F1A476B730018686D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3C4E0401A476B730018686D /* CoreFoundation.framework */,
+				B3C4E0521A4815CA0018686D /* Carbon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,10 +60,7 @@
 		B3C4E0421A476B730018686D /* UsbPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				B3C4E0451A476B730018686D /* UsbPluginProj.xcconfig */,
-				B3C4E0461A476B730018686D /* UsbPluginTarget.xcconfig */,
 				B3C4E0471A476B730018686D /* UsbPlugin.h */,
-				B3C4E0491A476B730018686D /* UsbPluginPriv.h */,
 				B3C4E04B1A476B730018686D /* UsbPlugin.cp */,
 				B3C4E0431A476B730018686D /* Supporting Files */,
 			);
@@ -90,7 +83,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C4E0481A476B730018686D /* UsbPlugin.h in Headers */,
-				B3C4E04A1A476B730018686D /* UsbPluginPriv.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +226,18 @@
 		B3C4E0501A476B730018686D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
 				INFOPLIST_FILE = UsbPlugin/Info.plist;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -243,8 +245,18 @@
 		B3C4E0511A476B730018686D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
 				INFOPLIST_FILE = UsbPlugin/Info.plist;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
